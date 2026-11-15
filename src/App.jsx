@@ -90,7 +90,7 @@ function App() {
         <h2>✈️ Travel Explorer</h2>
         <div className="nav-links">
           <Link to="/">Home</Link>
-          <a href="/#destinations">Destination</a>
+          <a href="#destinations">Destination</a>
           <Link to="/cart">
             My Trips ({cart.length})
           </Link>
