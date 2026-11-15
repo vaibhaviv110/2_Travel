@@ -1,0 +1,536 @@
+/* Google Font */
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap'); */
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f7ff;
+  color: #252044;
+}
+
+.app {
+  width: 100%;
+  min-height: 100vh;
+}
+
+
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 7%;
+  background:  #8e2de2;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.navbar h2 {
+  color: white;
+  margin: 0;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+  min-height: 450px;
+  padding: 80px 7%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  background: linear-gradient(120deg,
+      #927acf,
+      #6a488d,
+      #530e8c);
+
+  color: white;
+}
+
+/* Hero Heading */
+.hero h1 {
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  margin-bottom: 10px;
+}
+
+/* Hero Paragraph */
+.hero p {
+  font-size: 18px;
+  max-width: 650px;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+/* Explore Button */
+.hero a {
+  display: inline-block;
+  padding: 14px 30px;
+  background-color: #ffe66d;
+  color: #302050;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+
+.hero a:hover {
+  background-color: white;
+  transform: translateY(-4px);
+}
+
+
+/* Destinations Section */
+.destinations {
+  padding: 70px 7%;
+  text-align: center;
+  background-color: #f8f7ff;
+}
+
+.destinations h2 {
+  font-size: 36px;
+  color: #6c3ce9;
+  margin-bottom: 15px;
+}
+
+/* Trip Cards Container */
+.trip-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+
+/* Individual Trip Card */
+.trip-card {
+  background-color: white;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.10);
+  transition: 0.3s;
+  text-align: left;
+}
+
+.trip-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(108, 60, 233, 0.20);
+}
+
+/* Trip Image */
+.trip-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+/* Trip Information */
+.trip-info {
+  padding: 20px;
+}
+
+.trip-info h3 {
+  font-size: 22px;
+  color: #302050;
+  margin-bottom: 8px;
+}
+
+.trip-info p {
+  color: #777;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+/* Price */
+.trip-info h3 {
+  color: #6c3ce9;
+  font-size: 20px;
+  margin: 12px 0;
+}
+
+/* Add to Cart Button */
+.trip-info button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #6c3ce9, #ff6b9d);
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.trip-info button:hover {
+  opacity: 0.85;
+  transform: scale(1.02);
+}
+
+.trip-info button:disabled {
+  background: #0d512c;
+  cursor: not-allowed;
+  transform: none;
+}
+
+
+
+/* ===== SHOPPING CART ===== */
+
+.cart-section {
+  padding: 100px 5%;
+  background: linear-gradient(120deg, #f8f7ff, #fff0f6);
+}
+
+.cart-section h2 {
+  text-align: center;
+  color: #6c3ce9;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+/* Cart Item */
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+  margin-bottom: 18px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.cart-item img {
+  width: 110px;
+  height: 85px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.cart-info {
+  flex: 1;
+}
+
+.cart-info h3 {
+  color: #302050;
+  margin-bottom: 8px;
+}
+
+.cart-info p {
+  color: #777;
+  font-size: 14px;
+}
+
+/* Remove Button */
+
+.remove-btn {
+  background: #ff4b6e;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.remove-btn:hover {
+  background: #d93655;
+}
+
+/* Total */
+
+.cart-total {
+  text-align: right;
+  margin-top: 30px;
+  color: #6c3ce9;
+}
+
+/* Checkout */
+
+.checkout-btn {
+  padding: 13px 28px;
+  margin-top: 25px;
+  background: linear-gradient(90deg, #6c3ce9, #ff6b9d);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.checkout-btn:hover {
+  transform: scale(1.04);
+}
+
+/* Empty Cart */
+
+.empty-cart {
+  text-align: center;
+  padding: 35px;
+  color: #888;
+  font-size: 17px;
+}
+
+
+
+/* ===== FOOTER ===== */
+
+footer {
+  width: 100%;
+  padding: 25px 7%;
+  text-align: center;
+
+  background: linear-gradient(90deg,
+      #8a40ad,
+      #972ec8,
+      #7c1d99);
+
+  color: white;
+  box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.08);
+}
+
+footer p {
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+footer p:hover {
+  color: #ffe66d;
+  transition: 0.3s;
+}
+
+/* Footer Responsive */
+
+@media (max-width: 600px) {
+  footer {
+    padding: 20px 5%;
+  }
+
+  footer p {
+    font-size: 13px;
+  }
+}
+
+
+/* CHECKOUT PAGE */
+
+.checkout-page {
+  min-height: 75vh;
+  padding: 50px 7%;
+  background: linear-gradient(135deg, #f8f5ff, #fff0f5);
+}
+
+.checkout-page>h1 {
+  text-align: center;
+  color: #7438e8;
+  margin-bottom: 35px;
+  font-size: 36px;
+}
+
+.checkout-container {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 30px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.checkout-form,
+.booking-summary {
+  background: white;
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+}
+
+.checkout-form h2,
+.booking-summary h2 {
+  color: #5424bd;
+  margin-bottom: 25px;
+}
+
+.checkout-form label {
+  display: block;
+  margin: 15px 0 7px;
+  font-weight: 600;
+  color: #333;
+}
+
+.checkout-form input,
+.checkout-form select {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #ddd;
+  border-radius: 9px;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+.checkout-form input:focus,
+.checkout-form select:focus {
+  outline: none;
+  border-color: #8b45ed;
+}
+
+.confirm-btn {
+  width: 100%;
+  margin-top: 25px;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+  background: linear-gradient(90deg, #7139ed, #fa5795);
+}
+
+.summary-trip {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.summary-trip img {
+  width: 100px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.summary-trip h3 {
+  margin: 0 0 5px;
+  color: #302052;
+}
+
+.summary-trip p {
+  margin: 4px 0;
+  color: gray;
+}
+
+.summary-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #7139ed;
+  flex-wrap: wrap;
+}
+
+/* SUCCESS PAGE */
+
+.success-page {
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f8f4ff;
+  padding: 30px;
+}
+
+.success-card {
+  background: white;
+  padding: 55px;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0 5px 25px #ddd;
+}
+
+.success-card h1 {
+  color: #20a568;
+}
+
+.success-card button,
+.checkout-empty button {
+  padding: 13px 25px;
+  border: none;
+  border-radius: 9px;
+  background: linear-gradient(90deg, #7139ed, #fa5795);
+  color: white;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.checkout-empty {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+@media (max-width: 768px) {
+  .checkout-container {
+    grid-template-columns: 1fr;
+  }
+
+  .checkout-page>h1 {
+    font-size: 27px;
+  }
+}
+
+
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+@media (max-width: 900px) {
+  .trip-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-links {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .trip-container {
+    grid-template-columns: 1fr;
+  }
+
+  .cart-item {
+    flex-wrap: wrap;
+  }
+
+  .cart-item img {
+    width: 90px;
+  }
+}
